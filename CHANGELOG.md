@@ -20,7 +20,7 @@ and this project adheres to
 - Fix lookup selector polynomials to work correctly when chunking is in place
   ([#3541](https://github.com/o1-labs/proof-systems/pull/3541))
 
-#### Deprecated
+### Removed
 
 - Fully remove Cairo gate variants in `GateType`
   ([#3543](https://github.com/o1-labs/proof-systems/pull/3543))
