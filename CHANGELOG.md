@@ -9,6 +9,52 @@ and this project adheres to
 
 ## Unreleased
 
+### Changed
+
+- Enforce deterministic ordering of gate lookup tables by replacing `HashSet`
+  with  
+  `BTreeSet` ([#3539](https://github.com/o1-labs/proof-systems/pull/3539))
+
+### Fixed
+
+- Fix lookup selector polynomials to work correctly when chunking is in place
+  ([#3541](https://github.com/o1-labs/proof-systems/pull/3541))
+
+### Removed
+
+- Fully remove Cairo gate variants in `GateType`
+  ([#3543](https://github.com/o1-labs/proof-systems/pull/3543))
+
+## 0.5.0
+
+### [kimchi](./kimchi)
+
+#### Changed
+
+- Update `EndoSclMul` gate
+  ([#3514](https://github.com/o1-labs/proof-systems/pull/3514))
+
+### [o1-utils](./utils)
+
+#### Changed
+
+- Add `std` feature flag to support `no_std` environments
+  ([f53c3fe](https://github.com/o1-labs/proof-systems/commit/f53c3fe9ea))
+
+### [internal-tracing](./internal-tracing)
+
+#### Changed
+
+- Add `no_std` support to `internal-tracing`
+  ([ce71b0c](https://github.com/o1-labs/proof-systems/commit/ce71b0c403))
+
+### [poly-commitment](./poly-commitment)
+
+#### Changed
+
+- Add `no_std` support to `poly-commitment`
+  ([258ddae](https://github.com/o1-labs/proof-systems/commit/258ddae098))
+
 ## 0.4.1
 
 ### [kimchi](./kimchi)

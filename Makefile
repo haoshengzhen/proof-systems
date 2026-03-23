@@ -64,6 +64,30 @@ O1VM_FEATURES = \
 	$(WORKSPACE_FEATURES),\
 	o1vm/open_mips
 
+# Feature flags for building with all features except no-std.
+# The no-std feature conflicts with std-dependent code.
+# See https://github.com/o1-labs/mina-rust/issues/1984
+WORKSPACE_FEATURES = \
+	arkworks/std,\
+	arkworks/wasm,\
+	internal-tracing/enabled,\
+	internal-tracing/ocaml_types,\
+	kimchi/bn254,\
+	kimchi/check_feature_flags,\
+	kimchi/diagnostics,\
+	kimchi/internal_tracing,\
+	kimchi/ocaml_types,\
+	kimchi/wasm_types,\
+	mina-curves/asm,\
+	mina-poseidon/ocaml_types,\
+	o1-utils/diagnostics,\
+	poly-commitment/ocaml_types
+
+# Additional feature flags for o1vm builds
+O1VM_FEATURES = \
+	$(WORKSPACE_FEATURES),\
+	o1vm/open_mips
+
 # Default target
 .PHONY: all
 all: release
